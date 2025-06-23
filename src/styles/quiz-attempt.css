@@ -1,0 +1,89 @@
+/* quiz-attempt.css */
+
+.quiz-attempt {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+  
+  .qa-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .qa-header h1 {
+    margin: 0 0 0.5rem;
+    color: #3C2A99;
+  }
+  .qa-header p {
+    margin: 0;
+    color: #555;
+  }
+  
+  .qa-questions {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .qa-question {
+    margin-bottom: 1.5rem;
+  }
+  .qa-qtext {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #222;
+  }
+  
+  .qa-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .qa-option {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    transition: background 0.2s, border-color 0.2s;
+    cursor: pointer;
+  }
+  .qa-option input {
+    margin-right: 0.75rem;
+  }
+  .qa-option:hover {
+    border-color: #3C2A99;
+  }
+  .qa-option.correct {
+    background: rgba(60,42,153,0.1);
+    border-color: #3C2A99;
+  }
+  .qa-option.incorrect {
+    background: rgba(255,0,0,0.1);
+    border-color: #c00;
+  }
+  
+  .qa-actions {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .qa-submit-btn,
+  .qa-retake-btn,
+  .qa-back-btn {
+    background: #3C2A99;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    margin: 0 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+  }
+  .qa-submit-btn:hover,
+  .qa-retake-btn:hover,
+  .qa-back-btn:hover {
+    background: #2b1f6e;
+  }
+  .qa-result p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }

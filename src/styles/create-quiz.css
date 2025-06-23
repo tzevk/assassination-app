@@ -1,0 +1,245 @@
+/* styles/create-quiz.css */
+
+/* ─── Page Header ───────────────────────────────────────── */
+.page-header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #eee;
+}
+.page-header h1 {
+  margin: 0;
+  font-size: 1.75rem;
+  color: #3C2A99;
+  font-weight: 600;
+}
+
+/* ─── Form Container ────────────────────────────────────── */
+.quiz-form-container {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  overflow-y: auto;
+}
+.quiz-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ─── Card Base ────────────────────────────────────────── */
+.card {
+  background: #fff;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+.card h2 {
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+  color: #3C2A99;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+/* ─── Quiz Details Grid ────────────────────────────────── */
+.card label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+.card input[type="text"],
+.card select,
+.card textarea {
+  margin-top: 0.5rem;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.card input:focus,
+.card select:focus,
+.card textarea:focus {
+  border-color: #3C2A99;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(60, 42, 153, 0.15);
+}
+
+/* ─── Question Cards ──────────────────────────────────── */
+.question-card {
+  background: #fff;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+.question-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.question-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #3C2A99;
+  font-weight: 600;
+}
+.remove-q-btn {
+  background: transparent;
+  border: none;
+  color: #c00;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+/* ─── Question Input ─────────────────────────────────── */
+.question-input {
+  width: 100%;
+  min-height: 3.5rem;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  resize: vertical;
+}
+.question-input:focus {
+  border-color: #3C2A99;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(60, 42, 153, 0.1);
+}
+
+/* ─── Options ────────────────────────────────────────── */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.option-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.option-item input[type="radio"] {
+  accent-color: #3C2A99;
+  width: 1rem;
+  height: 1rem;
+}
+.option-input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+}
+.option-input:focus {
+  border-color: #3C2A99;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(60, 42, 153, 0.1);
+}
+
+/* ─── Add Question Button ────────────────────────────── */
+.add-question-btn {
+  background: #fafafa;
+  color: #3C2A99;
+  border: 2px dashed #3C2A99;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.add-question-btn:hover {
+  background: #3C2A99;
+  color: #fff;
+}
+
+/* ─── Action Buttons ─────────────────────────────────── */
+.action-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* ─── Save Quiz Button ───────────────────────────────── */
+.btn-submit-full {
+  background: #3C2A99;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+.btn-submit-full:hover {
+  background: #2b1f6e;
+}
+.btn-submit-full:active {
+  transform: translateY(1px);
+}
+
+/* ─── Responsive Tweaks ──────────────────────────────── */
+@media (max-width: 600px) {
+  .quiz-form-container {
+    padding: 0 1rem;
+  }
+  .card, .question-card {
+    padding: 1rem;
+  }
+  .action-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* Preview & Save button group */
+.action-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Preview Questions button */
+.btn-preview {
+  background: #FAE452;
+  color: #3C2A99;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+.btn-preview:hover {
+  background: #f4d942;
+}
+.btn-preview:active {
+  transform: translateY(1px);
+}
+
+/* Save Quiz button (if not already present) */
+.btn-submit-full {
+  background: #3C2A99;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+.btn-submit-full:hover {
+  background: #2b1f6e;
+}
+.btn-submit-full:active {
+  transform: translateY(1px);
+}

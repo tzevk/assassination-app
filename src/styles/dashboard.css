@@ -1,0 +1,31 @@
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f9f9fb;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 2rem;
+}
+
+.dashboard-tools {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.add-widget-btn {
+  background: #3c2a99;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.add-widget-btn:hover {
+  background: #2b1f6e;
+}

@@ -1,0 +1,66 @@
+/* styles/sidebar.css */
+
+.sidebar {
+    width: 240px;
+    background: #3C2A99;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    font-family: 'Segoe UI', sans-serif;
+    transition: width 0.3s ease;
+  }
+  
+  /* Optional collapsed state */
+  .sidebar.collapsed {
+    width: 72px;
+  }
+  
+  /* Navigation list reset */
+  .sidebar nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Each nav item */
+  .sidebar nav ul li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  
+  /* Icon color & sizing */
+  .sidebar nav ul li svg {
+    flex-shrink: 0;
+    color: #FAE452;
+  }
+  
+  /* Hover / focus state */
+  .sidebar nav ul li:hover,
+  .sidebar nav ul li:focus {
+    background: rgba(255, 255, 255, 0.1);
+    color: #FAE452;
+  }
+  
+  /* Active state — add `.active` to the current route’s <li> */
+  .sidebar nav ul li.active {
+    background: #FAE452;
+    color: #3C2A99;
+  }
+  
+  .sidebar nav ul li.active svg {
+    color: #3C2A99;
+  }
+  
+  /* Text styling */
+  .sidebar nav ul li {
+    font-size: 1rem;
+    font-weight: 500;
+    user-select: none;
+  }

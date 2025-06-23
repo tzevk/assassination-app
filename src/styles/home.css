@@ -1,0 +1,74 @@
+.landing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #ffdd00;
+    padding: 2rem;
+  }
+  
+  .card {
+    background-color: #FFFFFF;
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(28, 28, 28, 0.08);
+    text-align: center;
+    max-width: 640px;
+    width: 100%;
+  }
+  
+  .logo {
+    width: 300px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #3C2A98;
+    margin-bottom: 1rem;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+    color: #195E8F;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .button {
+    background-color: #195E8F;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(28, 28, 28, 0.05);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #376DB6;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(28, 28, 28, 0.1);
+  }
+  
+  @media (max-width: 600px) {
+    .title {
+      font-size: 2rem;
+    }
+  
+    .button {
+      width: 100%;
+      max-width: 240px;
+    }
+  }
