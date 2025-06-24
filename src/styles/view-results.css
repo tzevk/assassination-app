@@ -1,0 +1,53 @@
+.vr-container {
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+  
+  .vr-loading,
+  .vr-error {
+    text-align: center;
+    color: #555;
+  }
+  
+  .vr-error {
+    color: #c00;
+  }
+  
+  .vr-container h1 {
+    text-align: center;
+    color: #3C2A99;
+    margin-bottom: 1.5rem;
+  }
+  
+  .vr-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  }
+  
+  .vr-table thead {
+    background: #f5f5f5;
+  }
+  
+  .vr-table th,
+  .vr-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    font-size: 0.95rem;
+  }
+  
+  .vr-table th {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .vr-table tbody tr:hover {
+    background: rgba(60,42,153,0.05);
+  }
+  
+  .vr-table td:first-child {
+    font-weight: 500;
+    color: #3C2A99;
+  }

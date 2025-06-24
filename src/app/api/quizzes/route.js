@@ -11,11 +11,14 @@ export async function GET() {
     .find({}, { projection: { quizId:1, title:1, totalMarks:1, questions:1 } })
     .toArray()
 
-  const quizzes = raw.map(q => ({
-    quizId: q.quizId,
-    title: q.title,
-    totalMarks: q.totalMarks,
-    questions: q.questions
-  }))
+
+    const quizzes = raw.map(q => ({
+      quizId:     q.quizId,
+      title:      q.title,
+      totalMarks: q.totalMarks,
+      // default to an empty array if missing
+      questions: Array.isArray(q.questions) ? q.questions : []
+    }))
+    
   return NextResponse.json(quizzes)
 }

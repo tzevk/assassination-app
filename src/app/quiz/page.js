@@ -14,12 +14,12 @@ export default function QuizDashboard() {
     fetch('/api/quizzes')
       .then(res => res.json())
       .then(data => {
-        // Ensure questions is an array
-        const sanitized = data.map(q => ({
+        // Ensure every quiz has a questions array
+        const safe = data.map(q => ({
           ...q,
           questions: Array.isArray(q.questions) ? q.questions : []
         }))
-        setQuizzes(sanitized)
+        setQuizzes(safe)
         setLoading(false)
       })
       .catch(err => {
@@ -32,30 +32,31 @@ export default function QuizDashboard() {
     return <p className="loading">Loading quizzes…</p>
   }
 
-  if (quizzes.length === 0) {
-    return <p className="loading">No quizzes available at the moment.</p>
-  }
-
   return (
     <div className="quiz-dashboard">
       <h1>Available Quizzes</h1>
-      <div className="quiz-grid">
-        {quizzes.map((quiz) => {
-          return (
-            <div
-              key={quiz.quizId}                // ← must be here, on this div
-              className="quiz-card"
-              onClick={() => router.push(`/quiz/${quiz.quizId}`)}
-            >
-              <h2>{quiz.title}</h2>
-              <p>{quiz.questions.length} Questions</p>
-              <p>Total Marks: {quiz.totalMarks}</p>
-              <small>Code: {quiz.quizId}</small>
-              <button className="start-btn">Start Quiz</button>
-            </div>
-          )
-        })}
-      </div>
+
+      {quizzes.length === 0 ? (
+        <p>No quizzes available.</p>
+      ) : (
+        <div className="quiz-grid">
+          {quizzes.map(quiz => {
+            // key MUST be on this <div>, the very first element of the map
+            return (
+              <div
+                key={quiz.quizId}
+                className="quiz-card"
+                onClick={() => router.push(`/quiz/${quiz.quizId}`)}
+              >
+                <h2>{quiz.title}</h2>
+                <p>{quiz.questions.length} Questions</p>
+                <p>Total Marks: {quiz.totalMarks}</p>
+                <button className="start-btn">Start Quiz</button>
+              </div>
+            )
+          })}
+        </div>
+      )}
     </div>
   )
 }
